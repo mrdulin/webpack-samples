@@ -1,4 +1,4 @@
-const { join } = require('../util');
+const { join } = require('../../util');
 const getIPv4 = require('./scripts/ip');
 const child_process = require('child_process');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -12,9 +12,7 @@ const port = {
   weinre: 3001
 };
 child_process
-  .exec(
-    `weinre --verbose --httpPort ${port.weinre} --boundHost -all- --verbose`
-  )
+  .exec(`weinre --verbose --httpPort ${port.weinre} --boundHost -all- --verbose`)
   .stdout.pipe(process.stdout);
 
 let config = {
@@ -56,9 +54,7 @@ let config = {
       template: 'app/index.html',
       filename: 'index.html',
       inject: {
-        weinreTargetScript: `http://${ip}:${
-          port.weinre
-        }/target/target-script-min.js#anonymous`
+        weinreTargetScript: `http://${ip}:${port.weinre}/target/target-script-min.js#anonymous`
       }
     })
   ]
