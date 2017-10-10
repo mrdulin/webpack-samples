@@ -1,6 +1,5 @@
-const { join } = require('../util');
-const { plugins } = require('../webpack.config.base');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { join } = require('../../util');
+const { plugins } = require('../../webpack.config.base');
 
 let config = {
   entry: {
@@ -26,25 +25,14 @@ let config = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ['es2015'],
+              presets: ['es2015']
             }
           }
         ]
-      },
-      {
-        test: /\.(html)$/,
-        use: {
-          loader: 'html-loader'
-        }
       }
     ]
   },
-  plugins: plugins.concat([
-    new HtmlWebpackPlugin({
-      template: 'html-loader?interpolate!app/index.html',
-      filename: 'index-with-require.html'
-    })
-  ])
+  plugins: plugins
 };
 
 module.exports = config;
