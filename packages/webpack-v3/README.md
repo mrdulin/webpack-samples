@@ -1,4 +1,3 @@
-# webpack-v2.x
+# webpack
 
-- `node -v`: `v6.6.0`
-- `yarn -v`: `v0.21.3`
+`node/8.9.4`

@@ -1,5 +1,5 @@
-const { join } = require('../util');
-const { plugins, entry, output } = require('../webpack.config.base');
+const { join } = require('../../util');
+const { plugins, entry, output } = require('../../webpack.config.base');
 
 module.exports = {
   entry: entry,
@@ -48,11 +48,14 @@ module.exports = {
                 // ['es2015']
 
                 // tree-shaking
-                ['latest', {
-                  es2015: {
-                    modules: false
+                [
+                  'latest',
+                  {
+                    es2015: {
+                      modules: false
+                    }
                   }
-                }]
+                ]
               ]
             }
           }
@@ -62,5 +65,3 @@ module.exports = {
   },
   plugins: plugins
 };
-
-
