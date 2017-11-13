@@ -1,4 +1,7 @@
-import './array';
+// import './array-find';
+// import './Object-assign';
+// import './prototype-method';
+// import './Set';
 
 // require.ensure([], require => {
 //     const a = require('./a');
