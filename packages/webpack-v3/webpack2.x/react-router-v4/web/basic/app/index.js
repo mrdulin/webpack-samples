@@ -10,25 +10,25 @@ import About from './modules/about/main';
 import Topics from './modules/topics/main';
 
 const App = () => (
-    <BrowserRouter>
-        <div>
-            <ul>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/about'>About</Link></li>
-                <li><Link to='/topics'>Topics</Link></li>
-            </ul>
+  <BrowserRouter>
+    <div>
+      <ul>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/about'>About</Link></li>
+        <li><Link to='/topics'>Topics</Link></li>
+      </ul>
 
-            <hr/>
+      <hr />
 
-            <Route exact path='/' component={Home}></Route>
-            <Route path='/about' component={About}></Route>
-            <Route path='/topics' component={Topics}></Route>
+      <Route exact path='/' component={Home}></Route>
+      <Route path='/about' component={About}></Route>
+      <Route path='/topics' component={Topics}></Route>
 
-        </div>
-    </BrowserRouter>
+    </div>
+  </BrowserRouter>
 );
 
 ReactDOM.render(
-    <App/>,
-    document.getElementById('app')
+  <App />,
+  document.getElementById('app')
 );
