@@ -2,6 +2,7 @@
 // import './Object-assign';
 // import './prototype-method';
 // import './Set';
+// import './Promise';
 
 // require.ensure([], require => {
 //     const a = require('./a');
