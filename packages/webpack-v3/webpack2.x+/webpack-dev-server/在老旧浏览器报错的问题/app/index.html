@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>在老旧浏览器报错的问题</title>
+</head>
+
+<body>
+
+  <script>
+    // window.onerror = function (message) {
+    //   alert(message);
+    // }
+
+    alert(window.addEventListener);
+    window.addEventListener('error', (evt) => {
+      alert(evt.error.stack);
+    });
+  </script>
+</body>
+
+</html>
