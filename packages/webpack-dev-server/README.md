@@ -32,9 +32,8 @@ server {
 
 ## device and system infomation
 
-* iPhone 6 plus, system: 8.1.2
+* iPhone 6 plus, system: ios 8.1.2
+* iPhone 6s plus, system: ios 10
+* iPhone 7, system: ios 11
 
-* iPhone 6s plus, system: 10
-
-* iPhone 7, system: 11
-
+PC and android devices works fine. 
