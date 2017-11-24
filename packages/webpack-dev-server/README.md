@@ -30,11 +30,11 @@ server {
 127.0.0.1 www.domain1.com
 ```
 
-## device infomation
+## device and system infomation
 
-* device: iPhone 6 plus, system: 8.1.2
+* iPhone 6 plus, system: 8.1.2
 
-* device: iPhone 6s plus, system: 10
+* iPhone 6s plus, system: 10
 
-* device: iPhone 7, system: 11
+* iPhone 7, system: 11
 
