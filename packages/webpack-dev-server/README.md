@@ -42,7 +42,7 @@ PC and android devices works fine.
 ## steps
 
 1. open charles, start nginx
-2. set your mobile device wifi proxy: <Your PC ip>:8888 
+2. set your mobile device wifi proxy, your PC ip:8888 
 3. open your mobile browser, access http://www.domain1.com/srilanka
 
     
