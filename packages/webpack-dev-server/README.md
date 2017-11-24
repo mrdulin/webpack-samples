@@ -7,6 +7,7 @@ for reproducing issue
 * Operating System: OSX
 * Node Version: 8.4.0
 * NPM Version: 5.3.0
+* charles: 4.1.4
 
 ## nginx config
 
@@ -37,3 +38,11 @@ server {
 * iPhone 7, system: ios 11
 
 PC and android devices works fine. 
+
+## steps
+
+1. open charles, start nginx
+2. set your mobile device wifi proxy: <Your PC ip>:8888 
+3. open your mobile browser, access http://www.domain1.com/srilanka
+
+    
