@@ -32,12 +32,9 @@ server {
 
 ## device infomation
 
-* device: iPhone 6 plus
-* system: 8.1.2
+* device: iPhone 6 plus, system: 8.1.2
 
-* device: iPhone 6s plus
-* system: 10
+* device: iPhone 6s plus, system: 10
 
-* device: iPhone 7
-* system: 11
+* device: iPhone 7, system: 11
 
