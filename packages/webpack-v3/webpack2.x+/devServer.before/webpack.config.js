@@ -50,7 +50,6 @@ let config = {
 
       app.get('/github', function(req, res) {
         const referrer = req.get('Referrer');
-        app.set('referrer', referrer);
         console.log('referrer: ', referrer);
         const params = queryParams({
           client_id: serverConfig.ClientID,
@@ -60,7 +59,7 @@ let config = {
         res.redirect(url);
       });
       //81b2f255e7afc16801e171de52f37a3633c28761
-      app.get('/oauth/callback', function(req, res) {
+      app.get('/oauth', function(req, res) {
         console.log('query: ', req.query);
         const code = req.query.code;
         const state = req.query.state;
@@ -73,7 +72,6 @@ let config = {
         });
         headers.host = 'github.com';
         headers['Accept'] = 'application/json';
-        console.log('headers: ', headers);
         const url = apiHost.github + '/login/oauth/access_token?' + params;
         fetch(url, {
           method: 'POST',
@@ -82,7 +80,6 @@ let config = {
           .then(response => response.json())
           .then(response => {
             const { access_token, scope } = response;
-            app.set('access_token', access_token);
             return fetch(apiHost.api + '/user', {
               headers: {
                 Authorization: 'token' + ' ' + access_token
@@ -91,10 +88,10 @@ let config = {
           })
           .then(response => response.json())
           .then(response => {
-            // res.json(response);
-            const url =
-              app.get('referrer') + '?token=' + app.get('access_token');
-            res.redirect(url);
+            res.json(response);
+          })
+          .catch(e => {
+            console.error(e);
           });
       });
     }
