@@ -11,12 +11,17 @@
 <body>
   <div id="app"></div>
   <script>
-    var coin = ${require('./a.js')};
+    var coin = $ {
+      require('./a.js')
+    };
+
   </script>
   <script>
-    window.onload = ${require('./b.js').default};
+    window.onload = $ {
+      require('./b.js').default
+    };
+
   </script>
 </body>
 
 </html>
-

@@ -29,7 +29,7 @@ let config = {
     port: 3000,
     host: '0.0.0.0',
     before(app) {
-      app.get('/login', function(req, res) {
+      app.get('/login', function (req, res) {
         const url = 'http://data.gate.io/api2/1/ticker/doge_usdt';
         fetch(url)
           .then(response => {
@@ -43,12 +43,12 @@ let config = {
           });
       });
 
-      app.get('/t1', function(req, res) {
+      app.get('/t1', function (req, res) {
         // console.log('req.query: ', req.query);
         res.json({ name: 't1' });
       });
 
-      app.get('/github', function(req, res) {
+      app.get('/github', function (req, res) {
         const referrer = req.get('Referrer');
         console.log('referrer: ', referrer);
         const params = queryParams({
@@ -59,7 +59,7 @@ let config = {
         res.redirect(url);
       });
       //81b2f255e7afc16801e171de52f37a3633c28761
-      app.get('/oauth', function(req, res) {
+      app.get('/oauth', function (req, res) {
         console.log('query: ', req.query);
         const code = req.query.code;
         const state = req.query.state;
