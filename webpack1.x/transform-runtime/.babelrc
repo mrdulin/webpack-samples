@@ -4,11 +4,7 @@
     "stage-0"
   ],
   "plugins": [
-    [
-      "transform-runtime",
-      {
-        "polyfill": false
-      }
-    ]
+    "transform-runtime",
+    "transform-object-assign"
   ]
 }

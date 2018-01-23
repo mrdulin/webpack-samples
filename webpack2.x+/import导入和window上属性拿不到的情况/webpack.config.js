@@ -1,20 +1,20 @@
-const { join } = require('../util');
-const { plugins } = require('../webpack.config.base');
+const { join } = require("../util");
+const { plugins } = require("../webpack.config.base");
 
 let config = {
   entry: {
-    app: join('app')
+    app: join("app")
   },
   output: {
-    filename: '[name].[hash:8].js',
-    path: join('dist'),
+    filename: "[name].[hash:8].js",
+    path: join("dist"),
     pathinfo: true,
-    publicPath: '/'
+    publicPath: "/"
   },
   devServer: {
-    contentBase: './',
+    contentBase: "./",
     port: 3000,
-    host: '0.0.0.0'
+    host: "0.0.0.0"
   },
   module: {
     rules: [
@@ -23,9 +23,9 @@ let config = {
         exclude: /(node_modules)/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
-              presets: ['es2015'],
+              presets: ["es2015"]
             }
           }
         ]
