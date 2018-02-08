@@ -6,13 +6,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const src = path.join(__dirname, 'src');
 const dist = path.join(__dirname, 'dist');
 
-console.log(path.resolve(__dirname, '../node_modules/react-tap-event-plugin/src/injectTapEventPlugin'));
+// console.log(path.resolve(__dirname, '../node_modules/react-tap-event-plugin/src/SyntheticEvent.js'));
 
 module.exports = {
   entry: {
     app: src + '/index.js',
     vendor: [
-      'react-tap-event-plugin'
+      // 'react-tap-event-plugin'
     ]
   },
   output: {
@@ -25,10 +25,10 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        // include: [
-        // src,
-        // path.resolve(__dirname, '../node_modules/react-tap-event-plugin/src/injectTapEventPlugin')
-        // ],
+        include: [
+          src,
+          path.resolve(__dirname, '../node_modules/react-tap-event-plugin/src/SyntheticEvent.js')
+        ],
         // exclude: /node_modules/,
         loader: 'babel'
       }

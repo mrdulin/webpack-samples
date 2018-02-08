@@ -1,10 +1,11 @@
 // import './array-find';
+// import './array-instance-find';
+
 // import './Object-assign';
 // import './prototype-method';
 // import './Set';
 // import './Promise';
-var injectTapEventPlugin = require("react-tap-event-plugin");
-injectTapEventPlugin();
+import './Map';
 
 // require.ensure([], require => {
 //   const a = require('./a');
