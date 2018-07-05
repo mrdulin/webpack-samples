@@ -1,1 +1,0 @@
-export const getBody = () => document.body;
