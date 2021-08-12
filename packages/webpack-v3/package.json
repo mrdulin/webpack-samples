@@ -27,9 +27,6 @@
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
   },
-  "engines": {
-    "node": "node/8.9.4"
-  },
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
