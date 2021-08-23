@@ -1,11 +1,11 @@
-# `webpack-v5`
+# `webpack-v4`
 
 > TODO: description
 
 ## Usage
 
 ```
-const webpackV5 = require('webpack-v5');
+const webpackV4 = require('webpack-v4');
 
 // TODO: DEMONSTRATE API
 ```
