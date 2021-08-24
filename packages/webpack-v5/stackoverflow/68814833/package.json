@@ -1,0 +1,7 @@
+{
+  "name": "68814833",
+  "devDependencies": {
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
