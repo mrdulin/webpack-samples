@@ -3,10 +3,10 @@
 _基本用法：_
 
 ```js
-const url = require('./images/1.jpg');
+const url = require("./images/1.jpg");
 ```
 
-默认地，`require`的文件编译后，文件名会替换为`MD5``hash`，文件扩展名不变。
+默认地，`require`的文件编译后，文件名会替换为` MD5``hash `，文件扩展名不变。
 
 _文件名模板：_
 
@@ -14,12 +14,11 @@ _文件名模板：_
 
 _文件名模板占位符：_
 
-*	`[ext]`资源文件的扩展名
-*	`[name]`资源文件名
-*	`[path]`资源相对于查询字符串`context`的路径
-*	`[hash]`哈希值
-* 	`[<hashType>:hash:<digestType>:<length>]` 待续
-
+- `[ext]`资源文件的扩展名
+- `[name]`资源文件名
+- `[path]`资源相对于查询字符串`context`的路径
+- `[hash]`哈希值
+- `[<hashType>:hash:<digestType>:<length>]` 待续
 
 例子：
 
@@ -44,6 +43,6 @@ require("file?name=img-[sha512:hash:base64:7].[ext]!./image.jpg");
 require("file?name=picture.png!./myself.png");
 // => picture.png
 
-require("file?name=[path][name].[ext]?[hash]!./dir/file.png")
+require("file?name=[path][name].[ext]?[hash]!./dir/file.png");
 // => dir/file.png?e43b20c069c4a01867c31e98cbce33c9
 ```
