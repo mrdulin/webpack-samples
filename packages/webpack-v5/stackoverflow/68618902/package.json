@@ -1,0 +1,12 @@
+{
+  "name": "68618902",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.2",
+    "memfs": "^3.2.2",
+    "webpack": "^5.51.1",
+    "webpack-dev-middleware": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
