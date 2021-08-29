@@ -1,0 +1,8 @@
+{
+  "name": "custom-json-modules",
+  "devDependencies": {
+    "json5-loader": "^4.0.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
