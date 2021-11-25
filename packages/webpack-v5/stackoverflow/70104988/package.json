@@ -1,0 +1,12 @@
+{
+  "name": "70104988",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --config ./webpack/webpack.prod.js"
+  },
+  "devDependencies": {
+    "webpack": "^5.64.3",
+    "webpack-cli": "^4.9.1",
+    "webpack-merge": "^5.8.0"
+  }
+}
