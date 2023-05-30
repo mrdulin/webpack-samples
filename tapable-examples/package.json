@@ -1,0 +1,7 @@
+{
+  "name": "tapable-examples",
+  "scripts": {},
+  "dependencies": {
+    "tapable": "^2.2.1"
+  }
+}
