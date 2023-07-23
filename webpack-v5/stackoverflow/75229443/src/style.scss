@@ -1,0 +1,7 @@
+// @use 'scope:a' as a;
+// @use 'scope:b' as b;
+// @use 'scope:c' as c;
+
+@use 'scope/a' as a;
+@use 'scope/b' as b;
+@use 'scope/c' as c;
