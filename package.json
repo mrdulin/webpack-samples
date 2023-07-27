@@ -3,6 +3,8 @@
 	"version": "1.0.0",
 	"description": "Webpack samples of all versions",
 	"devDependencies": {
-		"prettier": "^2.8.8"
+		"@types/node": "^20.4.5",
+		"prettier": "^2.8.8",
+		"typescript": "^5.1.6"
 	}
 }

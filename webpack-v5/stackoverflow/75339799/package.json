@@ -1,8 +1,7 @@
 {
 	"version": "1.0.0",
 	"scripts": {
-		"build": "webpack",
-		"build:debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js"
+		"build": "webpack"
 	},
 	"devDependencies": {
 		"webpack": "^5.80.0",

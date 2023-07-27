@@ -5,6 +5,9 @@ export default {
 	entry: './server.js',
 	externals: [nodeExternals({ importType: 'module' })],
 	externalsPresets: { node: true },
+	experiments: {
+		outputModule: true,
+	},
 	output: {
 		filename: 'main.js',
 		clean: true,
