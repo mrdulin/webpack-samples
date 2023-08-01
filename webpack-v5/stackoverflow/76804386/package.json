@@ -1,0 +1,13 @@
+{
+	"version": "1.0.0",
+	"scripts": {
+		"build": "webpack"
+	},
+	"devDependencies": {
+		"css-loader": "^6.8.1",
+		"html-webpack-plugin": "^5.5.3",
+		"mini-css-extract-plugin": "^2.7.6",
+		"webpack": "^5.80.0",
+		"webpack-cli": "^5.0.2"
+	}
+}
