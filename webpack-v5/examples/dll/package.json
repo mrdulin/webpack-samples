@@ -1,12 +1,12 @@
 {
 	"version": "1.0.0",
 	"scripts": {
-    "build:dll": "webpack --config ./webpack.config.dll.js",
+		"build:dll": "webpack --config ./webpack.config.dll.js",
 		"prebuild": "npm run build:dll",
 		"build": "webpack --config ./webpack.config.user.js",
-    "preserve": "npm run build:dll",
+		"preserve": "npm run build:dll",
 		"serve": "webpack serve --config ./webpack.config.user.js",
-    "stats": "npm run build:user -- --profile --json=compilation-stats.json",
+		"stats": "npm run build:user -- --profile --json=compilation-stats.json",
 		"start": "http-server ./dist"
 	},
 	"devDependencies": {
@@ -23,6 +23,8 @@
 	},
 	"dependencies": {
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-redux": "^8.1.2",
+		"redux": "^4.2.1"
 	}
 }

@@ -49,7 +49,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
 		}),
-		new AddAssetHtmlPlugin({ filepath: path.resolve(__dirname, './dist/vendor.js') }),
+		new AddAssetHtmlPlugin({ glob: path.resolve(__dirname, './dist/vendor_*.js') }),
 		new webpack.ProgressPlugin(),
 	],
 };
