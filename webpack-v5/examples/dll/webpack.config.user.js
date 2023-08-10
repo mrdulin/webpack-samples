@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -34,11 +35,12 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.DllReferencePlugin({
-			context: path.resolve(__dirname, 'dist'),
+			context: path.resolve(__dirname),
 			manifest: path.resolve(__dirname, 'dist/manifest.json'),
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
 		}),
+		new AddAssetHtmlPlugin({ filepath: path.resolve(__dirname, './dist/vendor.js') }),
 	],
 };

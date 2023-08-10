@@ -2,15 +2,16 @@
 	"version": "1.0.0",
 	"scripts": {
 		"build:dll": "webpack --config ./webpack.config.dll.js",
-    "build:user": "webpack --config ./webpack.config.user.js",
-    "build": "webpack",
-    "start": "http-server ./dist"
+		"build:user": "webpack --config ./webpack.config.user.js",
+		"build": "webpack",
+		"start": "http-server ./dist"
 	},
 	"devDependencies": {
-    "@babel/core": "^7.22.10",
-    "@babel/preset-env": "^7.22.10",
-    "@babel/preset-react": "^7.22.5",
-    "babel-loader": "^9.1.3",
+		"@babel/core": "^7.22.10",
+		"@babel/preset-env": "^7.22.10",
+		"@babel/preset-react": "^7.22.5",
+		"add-asset-html-webpack-plugin": "^6.0.0",
+		"babel-loader": "^9.1.3",
 		"html-webpack-plugin": "^5.5.3",
 		"http-server": "^14.1.1",
 		"webpack": "^5.80.0",
