@@ -10,6 +10,13 @@ module.exports = {
 	entry: './src/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
+		publicPath: '',
+	},
+	devServer: {
+		static: {
+			directory: path.resolve(__dirname, 'dist'),
+		},
+		hot: true,
 	},
 	module: {
 		rules: [
@@ -42,5 +49,6 @@ module.exports = {
 			template: './src/index.html',
 		}),
 		new AddAssetHtmlPlugin({ filepath: path.resolve(__dirname, './dist/vendor.js') }),
+		new webpack.ProgressPlugin(),
 	],
 };
