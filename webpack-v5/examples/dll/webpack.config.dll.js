@@ -5,7 +5,7 @@ module.exports = {
 	name: 'vendor',
 	mode: 'development',
 	entry: {
-		vendor_react: ['react', 'react-dom'],
+		vendor_react: ['react', 'react-dom', 'react-dnd'],
 		vendor_redux: ['redux', 'react-redux'],
 	},
 	output: {

@@ -1,0 +1,12 @@
+{
+	"version": "1.0.0",
+	"scripts": {
+		"build": "webpack",
+		"build:debug": "node --inspect-brk ./node_modules/webpack/bin/webpack.js"
+	},
+	"devDependencies": {
+		"dotenv-webpack": "^8.0.1",
+		"webpack": "^5.80.0",
+		"webpack-cli": "^5.0.2"
+	}
+}
