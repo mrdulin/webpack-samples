@@ -5,15 +5,13 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		index: './src/index.js',
-		print: './src/print.js',
 	},
-	devtool: 'source-map',
 	output: {
-		filename: '[name].bundle.js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist'),
 		clean: true,
 	},
-	plugins: [new HtmlWebpackPlugin({ title: 'Development' })],
+	plugins: [new HtmlWebpackPlugin()],
 	devServer: {
 		static: './dist',
 		client: {
@@ -22,5 +20,14 @@ module.exports = {
 	},
 	optimization: {
 		runtimeChunk: 'single',
+		splitChunks: {
+			cacheGroups: {
+				commons: {
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendors',
+					chunks: 'all',
+				},
+			},
+		},
 	},
 };
