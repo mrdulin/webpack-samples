@@ -1,0 +1,10 @@
+.a {
+	background-color: red;
+}
+
+.b {
+	background-color: green;
+	& > p {
+		line-height: 1;
+	}
+}
