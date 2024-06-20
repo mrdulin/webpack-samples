@@ -1,35 +1,25 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { EsbuildPlugin } = require('esbuild-loader');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	mode: 'production',
-
-	entry: './src/index.tsx',
-
+	entry: './src/index.js',
 	output: {
-		path: path.resolve(__dirname, `./dist/`),
+		path: path.resolve(__dirname, 'dist'),
+		clean: true,
 	},
-
 	module: {
 		rules: [
 			{
 				test: /\.css$/i,
-				use: [MiniCssExtractPlugin.loader, 'css-loader'],
-			},
-			{
-				test: /\.s[ac]ss$/i,
 				use: [
-					MiniCssExtractPlugin.loader,
+					'style-loader',
 					{
 						loader: 'css-loader',
 						options: {
-              esModule: false,
 							modules: true,
 						},
 					},
-					'sass-loader',
 				],
 			},
 			{
@@ -51,18 +41,10 @@ module.exports = {
 	optimization: {
 		minimize: false,
 		minimizer: [
-			// Use esbuild to minify
 			new EsbuildPlugin({
 				target: 'es2015',
 				css: true,
 			}),
 		],
 	},
-
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: './src/index.html',
-		}),
-		new MiniCssExtractPlugin(),
-	],
 };

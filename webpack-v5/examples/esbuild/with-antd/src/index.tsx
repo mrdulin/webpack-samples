@@ -8,11 +8,12 @@ import 'antd/dist/antd.css';
 import './index.css';
 import './global.scss';
 
-// css module
-// does not work
-// import styles from './styles.scss';
+// css module, works when esModule option is true
+import styles from './styles.scss';
+console.log("🚀 ~ styles:", styles)
 
-import * as styles from './styles.scss';
+import * as namedStyles from './styles.scss';
+console.log("🚀 ~ namedStyles:", namedStyles)
 
 moment.locale('zh-cn');
 
@@ -29,6 +30,7 @@ const App = () => {
 				<div style={{ marginTop: 16 }}>当前日期：{date ? date.format('YYYY年MM月DD日') : '未选择'}</div>
 			</div>
 			<p className={styles.test}>test css module</p>
+      <p className={namedStyles.default.test}>test css module (named import)</p>
 		</ConfigProvider>
 	);
 };
