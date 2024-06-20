@@ -10,6 +10,7 @@ module.exports = {
 
 	output: {
 		path: path.resolve(__dirname, `./dist/`),
+		clean: true,
 	},
 
 	module: {
@@ -25,8 +26,10 @@ module.exports = {
 					{
 						loader: 'css-loader',
 						options: {
-              esModule: false,
-							modules: true,
+							esModule: true,
+							modules: {
+								namedExport: false,
+							},
 						},
 					},
 					'sass-loader',

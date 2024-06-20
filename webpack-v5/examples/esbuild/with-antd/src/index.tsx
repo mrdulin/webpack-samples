@@ -8,7 +8,10 @@ import 'antd/dist/antd.css';
 import './index.css';
 import './global.scss';
 
-// css module, works when esModule option is true
+// css module, works when
+
+// 1. esModule option is false
+// 2. esModule: true and modules.namedExport: false
 import styles from './styles.scss';
 console.log("🚀 ~ styles:", styles)
 
@@ -29,8 +32,9 @@ const App = () => {
 				<DatePicker onChange={handleChange} />
 				<div style={{ marginTop: 16 }}>当前日期：{date ? date.format('YYYY年MM月DD日') : '未选择'}</div>
 			</div>
-			<p className={styles.test}>test css module</p>
-      <p className={namedStyles.default.test}>test css module (named import)</p>
+      {/* 取消注释用于测试 */}
+			<p className={styles.usedClassName}>test css module</p>
+      {/* <p className={namedStyles.usedClassName}>test css module (named import)</p> */}
 		</ConfigProvider>
 	);
 };
