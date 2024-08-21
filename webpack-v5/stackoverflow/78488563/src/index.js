@@ -1,2 +1,2 @@
-import * as styles from './styles.module.css';
+import styles from './styles.module.css';
 console.log('🚀 ~ styles:', styles);
